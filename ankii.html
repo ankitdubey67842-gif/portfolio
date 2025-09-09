@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankit Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family:'Poppins',sans-serif;
+      line-height:1.6;
+      background:linear-gradient(135deg,#dff6ff,#a5d8ff);
+      color:#222;
+      scroll-behavior:smooth;
+    }
+
+    /* HEADER with 5-6 color gradient */
+    header {
+      background: linear-gradient(90deg, 
+        #ff6b6b,   /* red */
+        #feca57,   /* yellow */
+        #48dbfb,   /* light blue */
+        #1dd1a1,   /* green */
+        #5f27cd,   /* purple */
+        #ff9ff3    /* pink */
+      );
+      background-size: 600% 600%;
+      animation: gradientMove 12s ease infinite;
+      color:#fff;
+      padding:15px 40px;
+      position:fixed;width:100%;top:0;z-index:1000;
+      display:flex;justify-content:space-between;align-items:center;
+      border-bottom:1px solid rgba(255,255,255,0.2);
+    }
+
+    @keyframes gradientMove {
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    header h1 {font-size:22px;font-weight:700;}
+    nav ul {list-style:none;display:flex;}
+    nav ul li {margin-left:20px;}
+    nav ul li a {
+      color:#fff;text-decoration:none;font-weight:500;
+      transition:0.3s;
+    }
+    nav ul li a:hover {color:#222;}
+
+    section {padding:100px 60px;max-width:1200px;margin:auto;}
+    h2 {text-align:center;margin-bottom:50px;font-size:32px;font-weight:700;color:#0077b6;}
+
+    /* HERO */
+    #hero {
+      height:100vh;
+      background:linear-gradient(rgba(230, 173, 173, 0),rgba(230, 173, 173, 0)),
+        url('https://www.cloudinkmedia.ca/wp-content/uploads/2022/08/Programmer-Engineering-Development-Illustration-on-transparent-background-PNG-2048x2048.png')center/cover no-repeat;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+    }
+    #hero img {
+      width:160px;height:160px;border-radius:50%;border:4px solid #0077b6;
+      margin-bottom:20px;object-fit:cover;
+    }
+    #hero h2 {font-size:48px;font-weight:700;color:#02388acb;}
+    #hero p {font-size:18px;margin:15px 0; color: darkblue}
+    #hero a {
+      background:#0077b6;padding:12px 24px;color:#fff;text-decoration:none;
+      border-radius:30px;font-weight:600;transition:0.3s;
+    }
+    #hero a:hover {background:#023e8a;}
+
+    /* CARDS */
+    .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+    .card {
+      background:rgba(255,255,255,0.9);
+      padding:25px;border-radius:15px;text-align:center;
+      transition:0.4s;
+      border:1px solid rgba(0,0,0,0.1);
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card:hover {transform:translateY(-10px);box-shadow:0 6px 18px rgba(0,0,0,0.15);}
+    .card img {width:100%;border-radius:10px;margin-bottom:15px;}
+
+    /* CONTACT */
+    .contact form {display:flex;flex-direction:column;max-width:500px;margin:auto;}
+    .contact input,.contact textarea {
+      padding:12px;margin:10px 0;border:1px solid #ccc;border-radius:8px;
+      outline:none;font-size:16px;
+    }
+    .contact button {
+      padding:14px;border:none;background:#0077b6;color:#fff;cursor:pointer;
+      border-radius:30px;font-size:16px;font-weight:600;
+      transition:0.3s;
+    }
+    .contact button:hover {background:#023e8a;}
+
+    footer {
+      background:#0077b6;color:#fff;text-align:center;padding:20px;
+      border-top:1px solid rgba(0,0,0,0.1);
+    }
+
+    /* ANIMATIONS */
+    [data-animate] {
+      opacity:0;transform:translateY(30px);
+      transition:all 0.8s ease-out;
+    }
+    [data-animate].active {
+      opacity:1;transform:translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ankit</h1>
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#objective">Objective</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section id="hero">
+  <img src="https://picsum.photos/300/300?random=1" alt="Profile Picture">
+  <h2>Ankit Dubey</h2>
+  <p>Phone: 8384095488 | Email: ankitdubey67842@gmail.com</p>
+  <a href="#contact">Hire Me</a>
+</section>
+
+<!-- Objective -->
+<section id="objective" data-animate>
+  <h2>Objective</h2>
+  <p style="text-align:center;max-width:800px;margin:auto;">
+    To work in high-grown organization with a competitive and challenging environment that creates an ideal condition for delivering high quality services.
+  </p>
+</section>
+
+<!-- Skills -->
+<section id="skills" data-animate>
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+    <div class="card">React</div>
+    <div class="card">PHP</div>
+    <div class="card">MS Word</div>
+    <div class="card">MS Excel</div>
+    <div class="card">Canva</div>
+    <div class="card">ChatGPT AI</div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" data-animate>
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>Shri Balaji Pvt Ltd — Sales Executive</h3>
+    <p>June 2023 - April 2024</p>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" data-animate>
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://i.ytimg.com/vi/lsdGrdT6DtU/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AG2CIACgA-KAgwIABABGGggaChoMA8=&rs=AOn4CLD5h0Qj9xJ4yZoVyIKOyzg78QCnig" alt="Wireless Distance Measurement">
+      <h3>Wireless Distance Measurement</h3>
+      <p>Helps in measuring distance from 1 to 15 cm with the help of laser.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn.techjockey.com/blog/wp-content/uploads/2020/05/Gaming-Websites_3-1024x536.jpg" alt="The GamesZone">
+      <h3>The GamesZone</h3>
+      <p>Added HTML, CSS, JS, and PHP with video clips, images, and game links.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" data-animate>
+  <h2>Education</h2>
+  <div class="grid">
+    <div class="card">Class 10 — Modern BP Public School, FBD (2017)</div>
+    <div class="card">Class 12 — Modern BP Public School, FBD (2019)</div>
+    <div class="card">B.Tech (ECE) — MDU, Rohtak (2019-2023)</div>
+    <div class="card">Full Stack Developer — DICS, FBD (2024-2025)</div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications" data-animate>
+  <h2>Certifications</h2>
+  <div class="grid">
+    <div class="card">Cricket</div>
+    <div class="card">Quiz Competition</div>
+    <div class="card">Drawing</div>
+    <div class="card">Traffic Rules Quiz</div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact" data-animate>
+  <h2>Contact Me</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Ankit Dubey. All rights reserved.</p>
+</footer>
+
+<script>
+  // Contact form
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for contacting me, ' + document.getElementById('name').value + '!');
+    this.reset();
+  });
+
+  // Scroll animations
+  const elements = document.querySelectorAll('[data-animate]');
+  function checkScroll(){
+    const trigger = window.innerHeight * 0.85;
+    elements.forEach(el=>{
+      const top = el.getBoundingClientRect().top;
+      if(top<trigger){el.classList.add('active');}
+    });
+  }
+  window.addEventListener('scroll', checkScroll);
+  window.addEventListener('load', checkScroll);
+</script>
+
+</body>
+</html>
